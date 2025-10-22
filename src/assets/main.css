@@ -1,0 +1,146 @@
+/*
+* STYLES ONLY FOR THE TABLE GENERATOR
+*/
+body {
+  margin: 0;
+}
+
+.table-generator-app {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.table-generator-app > * {
+  flex: 1;
+}
+
+.mobile .posting-table {
+  flex-wrap: wrap;
+}
+
+.table-preview {
+  padding: 0 2rem;
+}
+
+.table-preview.mobile {
+  max-width: 400px;
+}
+
+.customize-table {
+  max-height: 80vh;
+  overflow: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .posting-table {
+    flex-wrap: wrap;
+  }
+
+  .customize-table {
+    max-height: unset;
+  }
+}
+
+.customize-table h3 {
+  display: inline-block;
+  margin: 0;
+}
+
+.table-generator-app details[open] {
+  margin-bottom: 1.5rem;
+}
+
+.table-generator-app summary {
+  margin-bottom: 0.5rem;
+}
+
+.table-generator-app .input-group {
+  margin-bottom: 0.5rem;
+}
+
+.table-generator-app .input-group:has(.instructions) {
+  margin: 0.75rem 0;
+}
+
+.table-generator-app .input-group label {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.table-generator-app .instructions {
+  margin: 0;
+  font-style: italic;
+}
+
+.generate-code {
+  background-color: white;
+  box-shadow: 0px -3px 3px #00000030;
+  padding: 1rem;
+  flex-basis: 100%;
+}
+
+.generate-button {
+  display: block;
+  margin: auto;
+  padding: 1rem;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.generate-button:hover {
+  background-color: #696969;
+  color: white;
+}
+
+button.copy {
+  cursor: pointer;
+  margin-left: 0.25rem;
+}
+
+button.copy.success {
+  border-color: green;
+  background-color: #B8F9C0;
+}
+
+/*
+* STYLES THAT MUST BE EXPORTED INTO THEME CSS
+*/
+
+.posting-table {
+	width: 100%;
+	max-width: 100%;
+	font-weight: 500;
+
+  position: sticky;
+  top: 1rem;
+  right: 1rem;
+
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.posting-table,
+.posting-table * {
+  box-sizing: border-box;
+}
+
+.posting-table-content {
+  max-width: 100%;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 500px) {
+  .posting-table {
+    flex-wrap: wrap;
+  }
+}
+
+.posting-table-image {
+  object-fit: contain;
+  width: auto;
+  max-width: 100%;
+}
