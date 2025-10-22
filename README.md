@@ -1,14 +1,16 @@
-# table-generator
+# Table Generator
+In some online communities, collaborative writers doing joint storytelling with their original characters want to decorate their posts. They often use "posting tables" to do so, decorating their character's text, speech, and writing notes. This often involves custom HTML and CSS, which many players struggle with. They will do the best they can with the knowledge they have, which often creates posting tables with invalid HTML that can break parts of the site, or that will not work at all on mobile devices.
 
-This template should help get you started developing with Vue 3 in Vite.
+I created this generator to create an easy interface for creating responsive table code for the specific use-case. I tried to include a variety of features I know that players look to accomplish.
 
-## Recommended IDE Setup
+## Tech
+- Vue.js
+- Pinia (for state management)
+- Vite (build & compile)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+## To-do
+- Include a base set of styles for the interface; most of it is currently un-styled
+- Address some bugs and feature requests
 
 ## Project Setup
 
