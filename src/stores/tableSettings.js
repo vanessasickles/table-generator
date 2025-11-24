@@ -185,6 +185,15 @@ export const useTableSettingsStore = defineStore('tableSettings', {
                 backgroundColor: hex
             }
         },
+        processedInnerContentStyles(state) {
+            let styles = { ...state.maxHeightStyles, ...state.innerContentStyles }
+
+            if (state.settings.useInnerContentArea) {
+                styles = { ...styles, ...state.innerContentBackground }
+            }
+
+            return styles
+        },
         flexDirection(state) {
             let direction = 'row'
             const side = state.settings.imageSide

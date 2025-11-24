@@ -128,8 +128,15 @@ export default {
 
             // Start .posting-table-content
             tableHeader += '<div class="posting-table-content"'
-            if (this.store.settings.useMaxHeight) {
-                tableHeader += ` style="${this.styleObjectToInlineString(this.store.maxHeightStyles)}"`
+            if (this.store.settings.useMaxHeight || this.store.settings.useInnerContentArea) {
+                tableHeader += ` style="`
+                if (this.store.settings.useMaxHeight) {
+                    tableHeader += `${this.styleObjectToInlineString(this.store.maxHeightStyles)}`
+                }
+                if (this.store.settings.useInnerContentArea) {
+                    tableHeader += `${this.styleObjectToInlineString(this.store.processedInnerContentStyles)}`
+                }
+                tableHeader += `"`
             }
 
             // Close starting tag for posting-table-content

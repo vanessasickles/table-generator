@@ -32,7 +32,7 @@
             <div 
                 class="posting-table-content"
                 ref="postingTableContent"
-                :style="{ ...store.maxHeightStyles, ...store.innerContentStyles, ...store.innerContentBackground }"
+                :style="store.processedInnerContentStyles"
             >
                 <img 
                     v-if="store.settings.imageSrc && store.settings.wrapText"
@@ -94,7 +94,7 @@ export default {
     computed: {
         showDeviceOptions() {
             return this.windowWidth > 500
-        },
+        }
     },
     methods: {
 
