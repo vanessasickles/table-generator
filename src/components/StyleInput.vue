@@ -150,7 +150,7 @@ export default {
                 return value
             },
             set(value) {
-                if (typeof value !== 'string') {
+                if (typeof value === 'number') {
                     if (Number.isInteger(value)) {
                         value = value.toString()
                     } else {
