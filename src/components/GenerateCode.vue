@@ -199,6 +199,7 @@ export default {
 
             for (const [key, value] of Object.entries(styleObject)) {
                 if (!emptyValues.includes(value)) {
+                    console.log(value)
                     string += `${this.camelToDash(key)}: ${value.replace(/"/g, "'")}; `
                 }
             }

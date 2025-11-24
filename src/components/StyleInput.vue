@@ -143,16 +143,23 @@ export default {
         },
         model: {
             get() {
-                let value
-                value = this[this.forStore][this.path]
+                let value = this[this.forStore][this.path]
                 if (value && this.unit && value.includes(this.unit)) {
                     value = value.replace(this.unit, "")
                 }
                 return value
             },
             set(value) {
-                if (Number.isInteger(value) && this.unit) {
-                    value = value.toString() + this.unit
+                if (typeof value !== 'string') {
+                    if (Number.isInteger(value)) {
+                        value = value.toString()
+                    } else {
+                        value = value.toFixed(2)
+                    }
+
+                    if (this.unit) {
+                        value += this.unit
+                    }
                 }
 
                 this[this.forStore][this.path] = value
