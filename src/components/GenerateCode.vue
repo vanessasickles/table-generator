@@ -1,6 +1,6 @@
 <template>
     <div class="generate-code">
-        <button
+        <button type="button"
             class="generate-button"
             @click="generateCode"
         >Generate Code</button>
@@ -12,7 +12,7 @@
             <h2>Code</h2>
             <h3>
                 Table Header
-                <button
+                <button type="button"
                     class="copy"
                     @click="copyToClipboard(currentCode.tableHeader, $event)"
                 >Copy</button>
@@ -22,7 +22,7 @@
             ></code>
 
             <h3>Table Footer
-                <button
+                <button type="button"
                     class="copy"
                     @click="copyToClipboard(currentCode.tableFooter, $event)"
                 >Copy</button>
@@ -32,7 +32,7 @@
             ></code>
 
             <h3>Pre-speech 
-                <button
+                <button type="button"
                     class="copy"
                     @click="copyToClipboard(currentCode.preSpeech, $event)"
                 >Copy</button></h3>
@@ -41,7 +41,7 @@
             ></code>
 
             <h3>Post-speech
-                <button
+                <button type="button"
                     class="copy"
                     @click="copyToClipboard(currentCode.postSpeech, $event)"
                 >Copy</button>

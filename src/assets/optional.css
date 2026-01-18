@@ -1,0 +1,117 @@
+#posting-table-generator {
+    --border-color: #000;
+    --text: #000;
+    --input-background: #FFF;
+    --code-bg: #f5f5f5;
+    --code-text: #000;
+}
+
+#posting-table-generator {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+}
+
+#posting-table-generator h2 {
+    margin-top: 0;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+
+#posting-table-generator h3 {
+    margin: 0;
+}
+
+#posting-table-generator .generate-code h3 {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+#posting-table-generator .generate-code code {
+    display: block;
+    color: var(--code-text);
+    background-color: var(--code-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+}
+
+#posting-table-generator details {
+    border: 1px solid var(--border-color);
+    margin-bottom: 0.25rem;
+}
+
+#posting-table-generator details:open {
+    padding: 0.5rem;
+}
+
+#posting-table-generator details:open summary {
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+#posting-table-generator summary {
+    padding: 0.5rem;
+    margin: 0;
+}
+
+#posting-table-generator input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+}
+
+#posting-table-generator summary,
+#posting-table-generator label:has(input[type=checkbox]),
+#posting-table-generator input[type=color],
+#posting-table-generator select,
+#posting-table-generator button {
+    cursor: pointer;
+}
+
+#posting-table-generator .customize-table .input-group,
+#posting-table-generator .customize-table .field-group {
+    margin-bottom: 1rem;
+}
+
+#posting-table-generator label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+#posting-table-generator .instructions {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+#posting-table-generator textarea,
+#posting-table-generator input[type=text],
+#posting-table-generator input[type=number],
+#posting-table-generator select,
+#posting-table-generator button {
+    padding: 0.25rem;
+    font-size: 0.9rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-background);
+}
+
+#posting-table-generator input[type=number] {
+    max-width: 50px;
+}
+
+#posting-table-generator button {
+    padding: 0.25rem 0.75rem;
+}
+
+#posting-table-generator button:hover {
+    color: var(--code-text);
+    background-color: var(--code-bg);
+    padding: 0.25rem 0.75rem;
+}
+
+#posting-table-generator input + .unit,
+#posting-table-generator input + button {
+    display: inline-block;
+    margin-left: 0.25rem;
+}

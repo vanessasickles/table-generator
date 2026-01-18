@@ -118,7 +118,7 @@
             Set all padding to
           </label>
           <input type="number" name="setAllPaddingTo" v-model="setAllPaddingToValue" />
-          <button @click="setAllPaddingTo(setAllPaddingToValue)">Set</button>
+          <button type="button" @click="setAllPaddingTo(setAllPaddingToValue)">Set</button>
         </div>
         <StyleInput type="number" label="Padding Top" path="paddingTop" unit="px" :attributes="{
           min: 0
@@ -183,7 +183,7 @@
               Set all padding to
             </label>
             <input type="number" name="setAllPaddingTo" v-model="setAllPaddingToValue" />
-            <button @click="setAllPaddingTo(setAllPaddingToValue)">Set</button>
+            <button type="button" @click="setAllPaddingTo(setAllPaddingToValue)">Set</button>
           </div>
           <StyleInput type="number" label="Padding Top" path="paddingTop" for="innerContentStyles" unit="px" :attributes="{
           min: 0

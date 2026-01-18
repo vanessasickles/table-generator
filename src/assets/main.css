@@ -7,9 +7,10 @@ body {
 
 .table-generator-app {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   flex-wrap: wrap;
   position: relative;
+  padding: 1rem;
 }
 
 .table-generator-app > * {
@@ -18,10 +19,6 @@ body {
 
 .mobile .posting-table {
   flex-wrap: wrap;
-}
-
-.table-preview {
-  padding: 0 2rem;
 }
 
 .table-preview.mobile {
@@ -40,6 +37,13 @@ body {
 
   .customize-table {
     max-height: unset;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .table-generator-app {
+    flex-direction: column;
   }
 }
 
@@ -77,7 +81,6 @@ body {
 
 .generate-code {
   background-color: white;
-  box-shadow: 0px -3px 3px #00000030;
   padding: 1rem;
   flex-basis: 100%;
 }
