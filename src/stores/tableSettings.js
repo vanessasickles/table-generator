@@ -89,12 +89,18 @@ export const useTableSettingsStore = defineStore('tableSettings', {
     }),
     getters: {
         allTableStyles(state) {
-            return {
+            const styles = {
                 ...state.tableStyles,
                 ...{ gap: state.settings.imageSpacing },
                 ...state.flexDirection,
                 ...state.imageAlign,
             }
+
+            if (state.settings.useTransparentBackground) {
+                styles.backgroundColor = 'transparent'
+                styles.color = 'inherit'
+            }
+            return styles
         },
         imageAlign(state) {
             let alignItems = 'flex-start'

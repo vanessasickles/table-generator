@@ -6,7 +6,7 @@
         <h3>Main Settings</h3>
       </summary>
       <div class="inputs">
-        <StyleInput type="checkbox" label="Use a transparent background?" path="useTransparentBackground" for="settings" />
+        <StyleInput type="checkbox" label="Use a transparent background?" path="useTransparentBackground" for="settings" instructions="When using a transparent background, the main text color will be the color of the theme's text. This ensures it works on all site themes. Make sure your speech and other text are compatible with all site theme options!" />
         <StyleInput v-if="!settings.useTransparentBackground" type="color" label="Text Color" path="color" />
         <StyleInput v-if="!settings.useTransparentBackground" type="color" label="Background Color" path="backgroundColor" />
         <StyleInput type="checkbox" label="Set a max height?" for="settings" path="useMaxHeight"

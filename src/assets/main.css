@@ -1,9 +1,6 @@
 /*
 * STYLES ONLY FOR THE TABLE GENERATOR
 */
-body {
-  margin: 0;
-}
 
 .table-generator-app {
   display: flex;
@@ -157,10 +154,9 @@ button.copy.success {
     --input-background: #FFF;
     --code-bg: #f5f5f5;
     --code-text: #000;
-}
 
-#posting-table-generator {
     font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
     color: var(--text);
 }
 
